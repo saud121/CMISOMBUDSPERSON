@@ -40,8 +40,8 @@ class _SplashScreenState extends State<SplashScreen> {
           Container(
             decoration: const BoxDecoration(gradient: LinearGradient(
                 colors: [
-                  const Color(0xFFe52d27),
-                  const Color(0xFFb31217),
+                  const Color(0xFF56ab2f),
+                  const Color(0xFFa8e063),
                 ]
             )),
           ),
@@ -54,12 +54,10 @@ class _SplashScreenState extends State<SplashScreen> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: const [
                     CircleAvatar(
-                      backgroundColor: Colors.green,
+                      backgroundColor: Colors.white,
                       radius: 50.0,
-                      child: Icon(
-                        Icons.note_alt,
-                        color: Colors.white,
-                        size: 50.0,
+                      child: Image(
+                        image: AssetImage('assets/images/ombudsman.png'),
                       ),
                     ),
                     Padding(padding: EdgeInsets.only(top: 10.0)),

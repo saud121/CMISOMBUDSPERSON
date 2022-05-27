@@ -120,7 +120,13 @@ class _SingleComplainState extends State<SingleComplain> {
                        mainAxisAlignment: MainAxisAlignment.center,
                        children: <Widget>[
                          RaisedButton(
-                           child: Text('Complain Timeline'),
+                           child: Row(
+                             children: [
+                               Icon(Icons.add_road),
+                               SizedBox(width:5,),
+                               Text('Complain Timeline'),
+                             ],
+                           ),
                            textColor: Colors.white,
                            color: selectedIndex == 0 ? Colors.blueAccent : Colors.grey,
                            onPressed: (){
@@ -130,7 +136,14 @@ class _SingleComplainState extends State<SingleComplain> {
                            },
                          ),
                          RaisedButton(
-                           child: Text('Complain Events'),
+                           child: Row(
+                             children: [
+                               Icon(Icons.account_tree),
+                               SizedBox(width:5,),
+
+                               Text('Complain Events'),
+                             ],
+                           ),
                            textColor: Colors.white,
                            color: selectedIndex == 1 ? Colors.pinkAccent : Colors.grey,
                            onPressed: (){
@@ -288,7 +301,7 @@ class _SingleComplainState extends State<SingleComplain> {
                                          child: Container(
 
                                              child:
-                                             ContainerEvent(ComplaintRemarks:"New Complaint and it is very long long long long long long long long long long long long long sentence")
+                                             ContainerEvent(ComplaintRemarks:"New Complaint Event is intiaiated and the following is very long long long long long long long long long long long long long sentence")
                                          ),
                                        ),
                                      );

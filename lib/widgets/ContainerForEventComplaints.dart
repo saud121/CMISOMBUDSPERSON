@@ -20,14 +20,17 @@ class ContainerEvent extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: <Widget>[
 
-        Center(
+        Container(
+          margin: EdgeInsets.only(bottom: 20),
+          child: Center(
 
-          //Create Colunm to add more icons for tree
-          child:Padding(
-              padding: const EdgeInsets.only(left: 2,right: 8),
-              child: Icon(Icons.view_week,color:Colors.deepOrangeAccent,)),
+            //Create Colunm to add more icons for tree
+            child:Padding(
+                padding: const EdgeInsets.only(left: 2,right: 8),
+                child: Icon(Icons.view_week,color:Colors.deepOrangeAccent,)),
 
 
+          ),
         ),
         Flexible(
           child: Column(
@@ -35,44 +38,13 @@ class ContainerEvent extends StatelessWidget {
                 Container(
                   child: Padding(
                     padding: const EdgeInsets.only(top: 2),
-                    child: Text("Remarks:",style:TextStyle(fontWeight:FontWeight.bold,fontSize:20,),),
+                    child: Text("Title",style:TextStyle(fontWeight:FontWeight.bold,fontSize:20,),),
                   ),
                 ),
-                Text(ComplaintRemarks,style:TextStyle(color:Colors.grey,fontSize:15),),
+                Text(ComplaintRemarks,style:TextStyle(color:Colors.black87,fontSize:15),),
+                SizedBox(height:5,),
+                Text("Summary: And this is conclusion",style:TextStyle(color:Colors.black87,fontSize:15,fontWeight:FontWeight.bold),),
                 SizedBox(height: 30,),
-                Expanded(
-                  flex: 0,
-                  child: Align(
-                    alignment: FractionalOffset.bottomLeft,
-                    child: Padding(
-                        padding: EdgeInsets.only(left:3),
-                        child:Container(
-                          decoration: BoxDecoration(borderRadius: BorderRadius.all(Radius.circular(10)),color:Colors.lightGreen),
-                          child: Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Text(Constants_english.Forwardedto+" test user admin",style: TextStyle(fontSize: 15,color: Colors.white),),
-                          ),
-                        )  //Your widget here,
-                    ),
-                  ),
-                ),
-                SizedBox(height:5),
-                Expanded(
-                  flex: 0,
-                  child: Align(
-                    alignment: FractionalOffset.bottomLeft,
-                    child: Padding(
-                        padding: EdgeInsets.only(left:3,bottom:5),
-                        child:Container(
-                          decoration: BoxDecoration(borderRadius: BorderRadius.all(Radius.circular(10)),color:Colors.grey),
-                          child: Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Text(Constants_english.Forwardedfrom+" test user admin",style: TextStyle(fontSize: 15,color: Colors.white),),
-                          ),
-                        ) //Your widget here,
-                    ),
-                  ),
-                ),
                 Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children:<Widget> [
                       Padding(
@@ -81,17 +53,17 @@ class ContainerEvent extends StatelessWidget {
                             decoration: BoxDecoration(borderRadius: BorderRadius.all(Radius.circular(10)),color:Colors.red),
                             child: Padding(
                               padding: const EdgeInsets.all(8.0),
-                              child: Text(Constants_english.Daysago,style: TextStyle(fontSize: 15,color: Colors.white),),
+                              child: Text("25-3-22 (Date)",style: TextStyle(fontSize: 15,color: Colors.white),),
                             ),
                           ) //Your widget here,
                       ),
                       Padding(
                           padding: EdgeInsets.only(left:3,bottom:5),
                           child:Container(
-                            decoration: BoxDecoration(borderRadius: BorderRadius.all(Radius.circular(10)),color:Colors.brown),
+                            decoration: BoxDecoration(borderRadius: BorderRadius.all(Radius.circular(10)),color:Colors.green),
                             child: Padding(
                               padding: const EdgeInsets.all(8.0),
-                              child: Text(Constants_english.Suggestedate,style: TextStyle(fontSize: 15,color: Colors.white),),
+                              child: Text("Notification Dispatched (Event type)",style: TextStyle(fontSize: 15,color: Colors.white),),
                             ),
                           ) //Your widget here,
                       ),
@@ -106,7 +78,8 @@ class ContainerEvent extends StatelessWidget {
                       ),
                     ),
                   ),
-                )]
+                )
+              ]
           ),
 
         ),

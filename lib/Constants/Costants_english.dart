@@ -25,11 +25,13 @@ class Constants_english {
   static const String complainantName ="Complainant name";
   static const String accuseName ="Accuse name";
   static const String departmentname ="Complainant Department name";
-  static const String accusedepartmentname ="Accuse Department name";
+  static const String accusedepartmentadress ="Accuse Department address";
   static const String designation ="Complainant Designation";
   static const String accusedesignation ="Accuse Designation";
   static const String CNIC ="Complainant Cnic";
   static const String accuseCNIC ="Accuse Cnic";
+  static const String accusePnumber ="Accuse Phone Number";
+  static const String PlaceofHarrasment ="Place of Harrasment";
 
 
 
